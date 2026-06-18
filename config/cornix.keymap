@@ -196,6 +196,22 @@
             bindings = <&switch_tasks_layer>;
             key-positions = <44 46>;
         };
+
+        left_bootloader_combo {
+            bindings = <&bootloader>;
+            key-positions = <0 12 24>;
+            layers = <7>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <500>;
+        };
+
+        right_bootloader_combo {
+            bindings = <&bootloader>;
+            key-positions = <11 23 37>;
+            layers = <7>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <500>;
+        };
     };
 
     macros {

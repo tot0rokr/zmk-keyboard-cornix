@@ -24,7 +24,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -74,7 +73,9 @@
         compatible = "zmk,behavior-sensor-rotate";
         label = "KNOB_MOUSE_SCROLL_2X";
         #sensor-binding-cells = <0>;
+
         // 2x speed: default SCRL value is 10, so MOVE_Y(+/-20) is double
+
         bindings = <&msc MOVE_Y(-20)>, <&msc MOVE_Y(20)>;
     };
 
@@ -120,6 +121,7 @@
     // pos 10: tap = backspace; hold = momentary BSPC layer, so any non-thumb
     // key pressed AND released while held becomes backspace. "balanced" means
     // releasing pos 10 first (rollover) keeps the other key as itself.
+
     bspc_ht: bspc_ht {
         compatible = "zmk,behavior-hold-tap";
         label = "BSPC_HT";
@@ -285,6 +287,9 @@
         };
     };
 
+    behaviors {
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -294,8 +299,9 @@
 &mo 11     &none               &kp W                    &kp E                     &kp R                                  &kp T                                 &kp Y                    &kp U                                   &kp I                     &kp O                    &bspc_ht 12 BSPC       &mo 11
 &kp ESC    &kp Q               &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab_retro LEFT_WIN F            &kp G                                 &kp H                    &quick_tab_retro LEFT_WIN J             &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &kp P                  &kp SQT
 &kp LCTRL  &quick_tab LCTRL A  &kp X                    &kp C                     &kp V                                  &kp B                   &none  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &quick_tab LCTRL SEMI  &kp APOS
-&none      &kp Z               &none                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 4 TAB                &layer_quick_tab 5 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 3 SPACE  &none                    &kp FSLH               &none
+&kp LCTRL  &kp Z               &mo 13                   &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 4 TAB                &layer_quick_tab 5 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 3 SPACE  &none                    &kp FSLH               &none
             >;
+
             sensor-bindings = <&knob_mouse_scroll_2x &inc_dec_kp PG_UP PG_DN>;
         };
 
@@ -307,6 +313,7 @@
 &trans     &kp LG(DOWN)   &kp LG(UP)     &win_left      &win_right     &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans
 &none      &none          &none          &trans         &trans         &trans                &trans  &trans  &trans  &none   &none   &none
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
@@ -333,11 +340,12 @@
         LTL {
             display-name = "symbol";
             bindings = <
-&trans  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                                       &kp N6                       &kp N7     &kp N8     &kp N9    &kp N0    &trans
-&trans  &kp LBKT  &kp RBKT  &kp LBRC   &kp RBRC   &quick_tab LEFT_SHIFT LPAR                   &quick_tab LEFT_SHIFT RPAR   &kp UNDER  &kp MINUS  &kp PLUS  &kp PIPE  &trans
-&none   &none     &none     &kp GRAVE  &kp TILDE  &kp APOS                      &none  &none   &kp DQT                      &kp EQUAL  &kp COMMA  &kp DOT   &kp BSLH  &none
-&none   &none     &none     &trans     &trans     &trans                                       &trans                       &trans     &trans     &none     &none     &none
+&trans  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                                    &kp N6                      &kp N7     &kp N8     &kp N9    &kp N0    &trans
+&trans  &kp LBKT  &kp RBKT  &kp LBRC   &kp RBRC   &quick_tab LEFT_SHIFT LPAR                &quick_tab LEFT_SHIFT RPAR  &kp UNDER  &kp MINUS  &kp PLUS  &kp PIPE  &trans
+&none   &none     &none     &kp GRAVE  &kp TILDE  &kp APOS                    &none  &none  &kp DQT                     &kp EQUAL  &kp COMMA  &kp DOT   &kp BSLH  &none
+&none   &none     &none     &trans     &trans     &trans                                    &trans                      &trans     &trans     &none     &none     &none
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
@@ -354,50 +362,50 @@
         FUNCL {
             display-name = "funcL";
             bindings = <
-&trans  &none  &none  &none  &none  &none                       &kp F15        &kp F9          &kp F10  &kp F11  &kp F12  &trans
-&trans  &none  &none  &none  &none  &none                       &kp F14        &kp F5          &kp F6   &kp F7   &kp F8   &trans
-&none   &none  &none  &none  &none  &none      &none  &none     &kp F13        &kp F1          &kp F2   &kp F3   &kp F4   &kp F16
-&none   &none  &none  &none  &none  &none                       &kp LCTRL      &kp LEFT_SHIFT  &none    &none    &none    &none
+&trans  &none  &none  &none  &none  &none                &kp F15    &kp F9          &kp F10  &kp F11  &kp F12  &trans
+&trans  &none  &none  &none  &none  &none                &kp F14    &kp F5          &kp F6   &kp F7   &kp F8   &trans
+&none   &none  &none  &none  &none  &none  &none  &none  &kp F13    &kp F1          &kp F2   &kp F3   &kp F4   &kp F16
+&none   &none  &none  &none  &none  &none                &kp LCTRL  &kp LEFT_SHIFT  &none    &none    &none    &none
             >;
         };
 
         DEVL {
             display-name = "device";
             bindings = <
-&trans        &none         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PREV         &kp C_NEXT                     &bt BT_CLR  &none  &none  &none  &none  &trans
-&trans        &kp C_MUTE    &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_PLAY_PAUSE   &none                          &none       &none  &none  &none  &none  &trans
-&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3       &bt BT_SEL 4   &none  &none     &none       &none  &none  &none  &none  &none
-&none         &none         &none                 &none                 &none              &none                          &none       &none  &none  &none  &none  &none
+&trans        &none         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PREV        &kp C_NEXT                  &bt BT_CLR  &none  &none  &none  &none  &trans
+&trans        &kp C_MUTE    &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_PLAY_PAUSE  &none                       &none       &none  &none  &none  &none  &trans
+&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3      &bt BT_SEL 4  &none  &none  &none       &none  &none  &none  &none  &none
+&none         &none         &none                 &none                 &none             &none                       &none       &none  &none  &none  &none  &none
             >;
         };
 
         LCL {
             display-name = "lcl";
             bindings = <
-&trans  &none  &none  &none  &none  &none                 &none  &none  &none  &none  &none  &trans
-&trans  &none  &none  &none  &none  &none                 &none  &none  &none  &none  &none  &trans
-&none   &none  &none  &none  &none  &none  &none  &none   &none  &none  &none  &none  &none  &none
-&none   &none  &none  &none  &none  &none                 &none  &none  &none  &none  &none  &none
+&trans  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &trans
+&trans  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &trans
+&none   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none   &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
             >;
         };
 
         RCL {
             display-name = "windows";
             bindings = <
-&trans  &kp LG(N1)             &kp LG(N2)         &kp LG(N3)         &kp LG(N4)     &kp LG(N5)                    &none  &none  &none  &none  &none  &trans
-&trans  &kp LG(N6)             &kp LG(N7)         &kp LG(N8)         &kp LG(N9)     &kp LG(N0)                    &none  &none  &none  &none  &none  &trans
-&none   &kp LC(LG(LS(GRAVE)))  &kp LG(LC(GRAVE))  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &none         &none  &none     &none  &none  &none  &none  &none  &none
-&none   &none                  &none              &kp LEFT_ALT       &kp LSHIFT     &kp LCTRL                     &none  &none  &none  &none  &none  &none
+&trans  &kp LG(N1)             &kp LG(N2)         &kp LG(N3)         &kp LG(N4)     &kp LG(N5)                &none  &none  &none  &none  &none  &trans
+&trans  &kp LG(N6)             &kp LG(N7)         &kp LG(N8)         &kp LG(N9)     &kp LG(N0)                &none  &none  &none  &none  &none  &trans
+&none   &kp LC(LG(LS(GRAVE)))  &kp LG(LC(GRAVE))  &kp LG(LS(GRAVE))  &kp LG(GRAVE)  &none       &none  &none  &none  &none  &none  &none  &none  &none
+&none   &none                  &none              &kp LEFT_ALT       &kp LSHIFT     &kp LCTRL                 &none  &none  &none  &none  &none  &none
             >;
         };
 
         BSL {
             display-name = "bsl";
             bindings = <
-&trans  &none  &none  &none  &none  &none                 &none  &none  &none          &none          &none    &trans
-&trans  &none  &none  &none  &none  &none                 &none  &none  &none          &kp BACKSPACE  &kp DEL  &trans
-&none   &none  &none  &none  &none  &none  &none  &none   &none  &none  &kp BACKSPACE  &kp DEL        &none    &none
-&none   &none  &none  &none  &none  &none                 &none  &none  &none          &none          &none    &none
+&trans  &none  &none  &none  &none  &none                &none  &none  &none          &none          &none    &trans
+&trans  &none  &none  &none  &none  &none                &none  &none  &none          &kp BACKSPACE  &kp DEL  &trans
+&none   &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp BACKSPACE  &kp DEL        &none    &none
+&none   &none  &none  &none  &none  &none                &none  &none  &none          &none          &none    &none
             >;
         };
 
@@ -419,6 +427,17 @@
 &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &none  &none  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC
 &none     &none     &none     &none     &none     &none                   &none     &none     &none     &none     &none     &none
             >;
+        };
+
+        NPL {
+            bindings = <
+&none  &none  &none  &none  &none  &none                &none  &none  &kp PLUS   &kp N7  &kp N8   &kp N9
+&none  &none  &none  &none  &none  &none                &none  &none  &kp MINUS  &kp N4  &kp N5   &kp N6
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp FSLH   &kp N1  &kp N2   &kp N3
+&none  &none  &none  &none  &none  &none                &none  &none  &kp STAR   &kp N0  &kp DOT  &kp ENTER
+            >;
+
+            label = "numpad";
         };
     };
 

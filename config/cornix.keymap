@@ -30,6 +30,10 @@
 
 &soft_off { hold-time-ms = <2000>; };
 
+// Mouse scroll on an encoder: disable acceleration so a brief hold scrolls at
+// full speed from the first tick (see the ms_scroll_* macros below).
+&msc { acceleration-exponent = <0>; };
+
 / {
     quick_tab: quick_tab {
         compatible = "zmk,behavior-hold-tap";
@@ -62,21 +66,32 @@
         tapping-term-ms = <150>;
     };
 
-    knob_mouse_scroll: knob_mouse_scroll {
-        compatible = "zmk,behavior-sensor-rotate";
-        label = "KNOB_MOUSE_SCROLL";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+    // &msc emits nothing on press; it only moves on a timer tick that fires
+    // trigger_period_ms later. A bare sensor-rotate tap releases before that,
+    // so it scrolls 0. These macros hold &msc ~60ms (>= one tick); combined
+    // with the &msc acceleration override above, each detent scrolls at full
+    // speed. Tune tap-ms / the MOVE_Y value if scrolling is too weak or fast.
+    ms_scroll_up: ms_scroll_up {
+        compatible = "zmk,behavior-macro";
+        label = "MS_SCROLL_UP";
+        #binding-cells = <0>;
+        tap-ms = <60>;
+        bindings = <&macro_tap &msc MOVE_Y(30)>;
+    };
+
+    ms_scroll_down: ms_scroll_down {
+        compatible = "zmk,behavior-macro";
+        label = "MS_SCROLL_DOWN";
+        #binding-cells = <0>;
+        tap-ms = <60>;
+        bindings = <&macro_tap &msc MOVE_Y(-30)>;
     };
 
     knob_mouse_scroll_2x: knob_mouse_scroll_2x {
         compatible = "zmk,behavior-sensor-rotate";
         label = "KNOB_MOUSE_SCROLL_2X";
         #sensor-binding-cells = <0>;
-
-        // 2x speed: default SCRL value is 10, so MOVE_Y(+/-20) is double
-
-        bindings = <&msc MOVE_Y(-20)>, <&msc MOVE_Y(20)>;
+        bindings = <&ms_scroll_down>, <&ms_scroll_up>;
     };
 
     mouse_click_tab_dance: mouse_click_tab_dance {

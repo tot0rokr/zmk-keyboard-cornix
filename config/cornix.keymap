@@ -117,16 +117,18 @@
         retro-tap;
     };
 
-    // pos 10: tap = backspace; held (other key pressed+released while held) =
-    // backspace. "balanced" so a release-time rollover stays a tap, not a hold.
+    // pos 10: tap = backspace; hold = momentary BSPC layer, so any non-thumb
+    // key pressed AND released while held becomes backspace. "balanced" means
+    // releasing pos 10 first (rollover) keeps the other key as itself.
     bspc_ht: bspc_ht {
         compatible = "zmk,behavior-hold-tap";
         label = "BSPC_HT";
-        bindings = <&kp>, <&kp>;
+        bindings = <&mo>, <&kp>;
 
         #binding-cells = <2>;
         flavor = "balanced";
         tapping-term-ms = <200>;
+        retro-tap;
     };
 
     combos {
@@ -289,10 +291,10 @@
         BL {
             display-name = "base";
             bindings = <
-&layer_quick_tab 11 TAB  &none               &kp W                    &kp E                     &kp R                                  &kp T                                 &kp Y                    &kp U                                   &kp I                     &kp O                    &bspc_ht BSPC BSPC     &layer_quick_tab 11 BSPC
-&kp ESC                  &kp Q               &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab_retro LEFT_WIN F            &kp G                                 &kp H                    &quick_tab_retro LEFT_WIN J             &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &kp P                  &kp SQT
-&kp LCTRL                &quick_tab LCTRL A  &kp X                    &kp C                     &kp V                                  &kp B                   &none  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &quick_tab LCTRL SEMI  &kp APOS
-&none                    &kp Z               &none                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 4 TAB                &layer_quick_tab 5 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 3 SPACE  &none                    &kp FSLH               &none
+&mo 11     &none               &kp W                    &kp E                     &kp R                                  &kp T                                 &kp Y                    &kp U                                   &kp I                     &kp O                    &bspc_ht 12 BSPC       &mo 11
+&kp ESC    &kp Q               &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab_retro LEFT_WIN F            &kp G                                 &kp H                    &quick_tab_retro LEFT_WIN J             &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &kp P                  &kp SQT
+&kp LCTRL  &quick_tab LCTRL A  &kp X                    &kp C                     &kp V                                  &kp B                   &none  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &quick_tab LCTRL SEMI  &kp APOS
+&none      &kp Z               &none                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 4 TAB                &layer_quick_tab 5 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 3 SPACE  &none                    &kp FSLH               &none
             >;
             sensor-bindings = <&knob_mouse_scroll_2x &inc_dec_kp PG_UP PG_DN>;
         };
@@ -406,6 +408,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans   &trans
+            >;
+        };
+
+        BSPCL {
+            display-name = "bspc";
+            bindings = <
+&kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC                &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &none     &kp BSPC
+&kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC                &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC
+&kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &none  &none  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC  &kp BSPC
+&none     &none     &none     &none     &none     &none                   &none     &none     &none     &none     &none     &none
             >;
         };
     };

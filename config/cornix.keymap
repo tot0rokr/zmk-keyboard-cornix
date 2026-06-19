@@ -288,10 +288,10 @@
         LHL {
             display-name = "left";
             bindings = <
-&trans     &none          &kp LA(LC(X))  &kp LA(LC(A))  &kp LA(LC(S))  &trans                &trans  &trans  &trans  &trans  &none   &trans
-&none      &kp LEFT       &none          &trans         &trans         &trans                &trans  &trans  &trans  &none   &trans  &none
-&kp LC(Y)  &kp LG(DOWN)   &kp UP         &kp DOWN       &kp RIGHT      &trans  &none  &none  &trans  &none   &none   &trans  &trans  &trans
-&trans     &kp LC(LA(Z))  &kp LG(UP)     &win_left      &win_right     &trans                &trans  &none   &none   &trans  &trans  &trans
+&trans     &kp LC(LA(Z))  &kp LA(LC(X))  &kp LA(LC(A))  &kp LA(LC(S))  &trans                &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(Y)  &kp LEFT       &kp UP         &kp DOWN       &kp RIGHT      &trans                &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp LG(DOWN)   &kp LG(UP)     &win_left      &win_right     &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans
+&none      &none          &none          &trans         &trans         &trans                &trans  &trans  &trans  &none   &none   &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -309,10 +309,10 @@
         RHL {
             display-name = "right";
             bindings = <
-&trans  &none   &trans  &trans  &trans  &trans                &kp INS   &kp PSCRN  &kp SLCK   &kp PAUSE_BREAK  &none      &trans
-&none   &trans  &none   &trans  &trans  &trans                &trans    &trans     &trans     &none            &kp RIGHT  &none
-&trans  &trans  &trans  &none   &none   &trans  &none  &none  &kp RALT  &kp LEFT   &kp DOWN   &kp UP           &kp END    &trans
-&trans  &trans  &trans  &none   &none   &trans                &kp CAPS  &kp HOME   &kp PG_DN  &kp PG_UP        &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                &kp INS   &kp PSCRN  &kp SLCK   &kp PAUSE_BREAK  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                &kp RALT  &kp LEFT   &kp DOWN   &kp UP           &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none  &none  &kp CAPS  &kp HOME   &kp PG_DN  &kp PG_UP        &kp END    &trans
+&none   &none   &none   &trans  &trans  &trans                &trans    &trans     &trans     &none            &none      &none
             >;
         };
 

@@ -280,10 +280,10 @@
         LHL {
             display-name = "left";
             bindings = <
-&trans     &none          &kp LA(LC(X))  &kp LA(LC(A))  &kp LA(LC(S))  &trans                &trans  &trans         &trans         &trans  &none   &trans
-&trans     &kp LC(LA(Z))  &kp LG(UP)     &win_left      &win_right     &trans                &trans  &kp BACKSPACE  &kp BACKSPACE  &trans  &trans  &trans
-&kp LC(Y)  &kp LG(DOWN)   &kp UP         &kp DOWN       &kp RIGHT      &trans  &none  &none  &trans  &kp DEL        &kp DEL        &trans  &trans  &trans
-&none      &kp LEFT       &none          &trans         &trans         &trans                &trans  &trans         &trans         &none   &trans  &none
+&trans     &none          &kp LA(LC(X))  &kp LA(LC(A))  &kp LA(LC(S))  &trans                &trans  &trans  &trans  &trans  &none   &trans
+&none      &kp LEFT       &none          &trans         &trans         &trans                &trans  &trans  &trans  &none   &trans  &none
+&kp LC(Y)  &kp LG(DOWN)   &kp UP         &kp DOWN       &kp RIGHT      &trans  &none  &none  &trans  &none   &none   &trans  &trans  &trans
+&trans     &kp LC(LA(Z))  &kp LG(UP)     &win_left      &win_right     &trans                &trans  &none   &none   &trans  &trans  &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -301,10 +301,10 @@
         RHL {
             display-name = "right";
             bindings = <
-&trans  &none   &trans  &trans         &trans         &trans                &kp INS   &trans    &trans     &trans     &none      &trans
-&trans  &trans  &trans  &kp BACKSPACE  &kp BACKSPACE  &trans                &kp CAPS  &kp HOME  &kp PG_DN  &kp PG_UP  &trans     &trans
-&trans  &trans  &trans  &kp DEL        &kp DEL        &trans  &none  &none  &kp RALT  &kp LEFT  &kp DOWN   &kp UP     &kp END    &trans
-&none   &trans  &none   &trans         &trans         &trans                &trans    &trans    &trans     &none      &kp RIGHT  &none
+&trans  &none   &trans  &trans  &trans  &trans                &kp INS   &trans    &trans     &trans     &none      &trans
+&none   &trans  &none   &trans  &trans  &trans                &trans    &trans    &trans     &none      &kp RIGHT  &none
+&trans  &trans  &trans  &none   &none   &trans  &none  &none  &kp RALT  &kp LEFT  &kp DOWN   &kp UP     &kp END    &trans
+&trans  &trans  &trans  &none   &none   &trans                &kp CAPS  &kp HOME  &kp PG_DN  &kp PG_UP  &trans     &trans
             >;
         };
 

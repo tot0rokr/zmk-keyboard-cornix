@@ -50,7 +50,7 @@ layers:
   - {t: SPACE, h: right}
   - ''
   - /
-  - ''
+  - ''''
   left:
   - {t: ▽, type: trans}
   - ''

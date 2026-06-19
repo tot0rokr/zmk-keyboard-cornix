@@ -28,6 +28,14 @@ This community firmware has been tested with Cornix using ZMK and provides full 
 ![image](images/cornix_with_dongle.png)
 ![image](images/cornix_layout.png)
 
+## Keymap
+
+Layers are auto-rendered from [`config/cornix.keymap`](config/cornix.keymap) by
+[keymap-drawer](https://github.com/caksoylar/keymap-drawer) on every push, via
+[`.github/workflows/draw.yml`](.github/workflows/draw.yml).
+
+![Cornix keymap](keymap-drawer/cornix.svg)
+
 ## warning：device breakdown recovery
 
 the original cornix use flash layout without softdevice

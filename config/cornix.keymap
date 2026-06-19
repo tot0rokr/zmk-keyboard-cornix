@@ -279,7 +279,7 @@
             bindings = <
 &kp TAB    &none               &kp W                    &kp E                     &kp R                                  &kp T                                 &kp Y                    &kp U                                   &kp I                     &kp O                    &none                  &kp BSPC
 &kp ESC    &kp Q               &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab_retro LEFT_WIN F            &kp G                                 &kp H                    &quick_tab_retro LEFT_WIN J             &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &kp P                  &kp SQT
-&kp LCTRL  &quick_tab LCTRL A  &kp X                    &kp C                     &kp V                                  &kp B                   &none  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &quick_tab LCTRL SEMI  &layer_quick_tab 10 APOS
+&kp LCTRL  &quick_tab LCTRL A  &kp X                    &kp C                     &kp V                                  &kp B                   &none  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &quick_tab LCTRL SEMI  &kp APOS
 &none      &kp Z               &none                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 4 TAB                &layer_quick_tab 5 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 3 SPACE  &none                    &kp FSLH               &none
             >;
             sensor-bindings = <&knob_mouse_scroll_2x &inc_dec_kp PG_UP PG_DN>;

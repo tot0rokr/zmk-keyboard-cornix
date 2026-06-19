@@ -32,6 +32,7 @@
 
 // Mouse scroll on an encoder: disable acceleration so a brief hold scrolls at
 // full speed from the first tick (see the ms_scroll_* macros below).
+
 &msc { acceleration-exponent = <0>; };
 
 / {
@@ -71,12 +72,13 @@
     // so it scrolls 0. These macros hold &msc ~60ms (>= one tick); combined
     // with the &msc acceleration override above, each detent scrolls at full
     // speed. Tune tap-ms / the MOVE_Y value if scrolling is too weak or fast.
+
     ms_scroll_up: ms_scroll_up {
         compatible = "zmk,behavior-macro";
         label = "MS_SCROLL_UP";
         #binding-cells = <0>;
         tap-ms = <60>;
-        bindings = <&macro_tap &msc MOVE_Y(30)>;
+        bindings = <&macro_tap>, <&msc MOVE_Y(30)>;
     };
 
     ms_scroll_down: ms_scroll_down {
@@ -84,7 +86,7 @@
         label = "MS_SCROLL_DOWN";
         #binding-cells = <0>;
         tap-ms = <60>;
-        bindings = <&macro_tap &msc MOVE_Y(-30)>;
+        bindings = <&macro_tap>, <&msc MOVE_Y(-30)>;
     };
 
     knob_mouse_scroll_2x: knob_mouse_scroll_2x {
@@ -314,7 +316,7 @@
 &mo 11     &none               &kp W                    &kp E                     &kp R                                  &kp T                                 &kp Y                    &kp U                                   &kp I                     &kp O                    &bspc_ht 12 BSPC       &mo 11
 &kp ESC    &kp Q               &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab_retro LEFT_WIN F            &kp G                                 &kp H                    &quick_tab_retro LEFT_WIN J             &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &kp P                  &kp ENTER
 &kp LCTRL  &quick_tab LCTRL A  &kp X                    &kp C                     &kp V                                  &kp B                   &none  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &quick_tab LCTRL SEMI  &kp APOS
-&kp LCTRL  &kp Z               &mo 13                   &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 4 TAB                &layer_quick_tab 5 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 3 SPACE  &none                    &kp FSLH               &none
+&kp LCTRL  &kp Z               &mo 13                   &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 4 TAB                &layer_quick_tab 5 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 3 SPACE  &none                    &kp FSLH               &kp SQT
             >;
 
             sensor-bindings = <&knob_mouse_scroll_2x &inc_dec_kp PG_UP PG_DN>;

@@ -70,6 +70,14 @@
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
     };
 
+    knob_mouse_scroll_2x: knob_mouse_scroll_2x {
+        compatible = "zmk,behavior-sensor-rotate";
+        label = "KNOB_MOUSE_SCROLL_2X";
+        #sensor-binding-cells = <0>;
+        // 2x speed: default SCRL value is 10, so MOVE_Y(+/-20) is double
+        bindings = <&msc MOVE_Y(-20)>, <&msc MOVE_Y(20)>;
+    };
+
     mouse_click_tab_dance: mouse_click_tab_dance {
         compatible = "zmk,behavior-tap-dance";
         label = "MOUSE_CLICK_TAB_DANCE";
@@ -274,7 +282,7 @@
 &kp LCTRL  &quick_tab LCTRL A  &kp X                    &kp C                     &kp V                                  &kp B                   &none  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &quick_tab LCTRL SEMI  &layer_quick_tab 10 APOS
 &none      &kp Z               &none                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 4 TAB                &layer_quick_tab 5 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 3 SPACE  &none                    &kp FSLH               &none
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&knob_mouse_scroll_2x &inc_dec_kp PG_UP PG_DN>;
         };
 
         LHL {

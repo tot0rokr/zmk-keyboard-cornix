@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: hitsmaxft
       url-base: https://github.com/hitsmaxft
+    - name: tot0rokr
+      url-base: https://github.com/tot0rokr
     - name: englmaxi
       url-base: https://github.com/englmaxi
     - name: urob
@@ -21,8 +23,10 @@ manifest:
       remote: urob
       revision: main
       clone-depth: 1
+    # fork of hitsmaxft/zmk-rgbled-widget with the Kconfig type fix
+    # (upstream redeclares LED_STRIP/WS2812_STRIP without a type -> breaks build)
     - name: zmk-rgbled-widget
-      remote: hitsmaxft
+      remote: tot0rokr
       revision: main
       clone-depth: 1
     - name: zmk-dongle-display

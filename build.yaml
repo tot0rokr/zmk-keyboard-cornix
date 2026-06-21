@@ -27,7 +27,8 @@ include:
   #   snippet: studio-rpc-usb-uart
   #   artifact-name: cornix_dongle_zds_nano
   - board: cornix_left
-    shield: cornix_indicator
+    # no indicator: the widget's central-only code (widget.c transport) doesn't
+    # compile on the standalone central; use cornix_ph_left for the dongle setup
     artifact-name: cornix_left_default_nosd
 
   - board: cornix_ph_left

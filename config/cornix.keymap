@@ -313,10 +313,10 @@
         BL {
             display-name = "base";
             bindings = <
-&mo 7     &none               &kp W                    &kp E                     &kp R                                  &kp T                                 &kp Y                    &kp U                                   &kp I                     &kp O                    &bspc_ht 8 BSPC       &mo 7
-&kp ESC    &kp Q               &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab_retro LEFT_WIN F            &kp G                                 &kp H                    &quick_tab_retro LEFT_WIN J             &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &kp P                  &kp ENTER
-&kp LCTRL  &quick_tab LCTRL A  &kp X                    &kp C                     &kp V                                  &kp B                   &none  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &quick_tab LCTRL SEMI  &kp APOS
-&kp LCTRL  &kp Z               &mo 9                   &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 3 TAB                &layer_quick_tab 4 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 2 SPACE  &none                    &kp FSLH               &kp SQT
+&mo 7      &kp Q               &kp W                    &kp E                     &kp R                                  &kp T                                 &kp Y                    &kp U                                   &kp I                     &kp O                    &kp P                  &mo 7
+&kp ESC    &quick_tab LCTRL A  &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab_retro LEFT_WIN F            &kp G                                 &kp H                    &quick_tab_retro LEFT_WIN J             &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &quick_tab LCTRL SEMI  &kp ENTER
+&kp LCTRL  &kp Z               &kp X                    &kp C                     &kp V                                  &kp B                   &none  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &kp FSLH               &bspc_ht 8 BSPC
+&kp LCTRL  &none               &mo 9                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 3 TAB                &layer_quick_tab 4 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 2 SPACE  &none                    &none                  &kp SQT
             >;
 
             sensor-bindings = <&knob_mouse_scroll_2x &inc_dec_kp PG_UP PG_DN>;
@@ -325,10 +325,10 @@
         LHL {
             display-name = "left";
             bindings = <
-&trans     &none          &kp LA(LC(X))  &kp LA(LC(A))  &kp LA(LC(S))  &trans                &trans  &trans  &trans  &trans  &none   &trans
-&kp LC(Y)  &kp LC(LA(Z))  &kp UP         &kp DOWN       &kp RIGHT      &trans                &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &kp LEFT       &kp LG(UP)     &win_left      &win_right     &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans
-&none      &kp LG(DOWN)   &none          &trans         &trans         &trans                &trans  &trans  &trans  &none   &trans  &none
+&trans     &kp LC(LA(Z))  &kp LA(LC(X))  &kp LA(LC(A))  &kp LA(LC(S))  &trans                &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(Y)  &kp LEFT       &kp UP         &kp DOWN       &kp RIGHT      &trans                &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp LG(DOWN)   &kp LG(UP)     &win_left      &win_right     &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans
+&none      &none          &none          &trans         &trans         &trans                &trans  &trans  &trans  &none   &none   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -337,10 +337,10 @@
         RHL {
             display-name = "right";
             bindings = <
-&trans  &none   &trans  &trans  &trans  &trans                &kp INS   &kp PSCRN  &kp SLCK   &kp PAUSE_BREAK  &none      &trans
-&trans  &trans  &trans  &trans  &trans  &trans                &kp RALT  &kp LEFT   &kp DOWN   &kp UP           &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none  &none  &kp CAPS  &kp HOME   &kp PG_DN  &kp PG_UP        &kp RIGHT  &trans
-&none   &trans  &none   &trans  &trans  &trans                &trans    &trans     &trans     &none            &kp END    &none
+&trans  &trans  &trans  &trans  &trans  &trans                &kp INS   &kp PSCRN  &kp SLCK   &kp PAUSE_BREAK  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                &kp RALT  &kp LEFT   &kp DOWN   &kp UP           &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none  &none  &kp CAPS  &kp HOME   &kp PG_DN  &kp PG_UP        &kp END    &trans
+&none   &none   &none   &trans  &trans  &trans                &trans    &trans     &trans     &none            &none      &none
             >;
         };
 

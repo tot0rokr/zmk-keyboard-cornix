@@ -314,9 +314,9 @@
             display-name = "base";
             bindings = <
 &mo 7      &kp Q               &kp W                    &kp E                     &kp R                                  &kp T                                 &kp Y                    &kp U                                   &kp I                     &kp O                    &kp P                  &mo 7
-&kp ESC    &quick_tab LCTRL A  &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab_retro LEFT_WIN F            &kp G                                 &kp H                    &quick_tab_retro LEFT_WIN J             &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &quick_tab LCTRL SEMI  &kp ENTER
+&kp LCTRL  &quick_tab LCTRL A  &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab_retro LEFT_WIN F            &kp G                                 &kp H                    &quick_tab_retro LEFT_WIN J             &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &quick_tab LCTRL SEMI  &kp APOS
 &kp LCTRL  &kp Z               &kp X                    &kp C                     &kp V                                  &kp B                   &none  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &kp FSLH               &bspc_ht 8 BSPC
-&kp LCTRL  &none               &mo 9                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 3 TAB                &layer_quick_tab 4 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 2 SPACE  &none                    &none                  &kp SQT
+&none      &none               &mo 9                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 3 TAB                &layer_quick_tab 4 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 2 SPACE  &none                    &none                  &none
             >;
 
             sensor-bindings = <&knob_mouse_scroll_2x &inc_dec_kp PG_UP PG_DN>;

@@ -48,9 +48,9 @@ layers:
   - {t: RALT, h: function}
   - {t: SPACE, h: RIGHT SHIFT}
   - {t: SPACE, h: right}
-  - ''
-  - ''
-  - ''
+  - '-'
+  - '='
+  - \
   left:
   - {t: ▽, type: trans}
   - Ctl+Alt+Z
@@ -493,7 +493,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - '*'
   - /
   - '1'
   - '2'
@@ -502,13 +502,13 @@ layers:
   - ''
   - {type: held}
   - ''
+  - {t: SPACE, h: LEFT SHIFT}
   - ''
   - ''
   - ''
-  - ''
-  - '*'
   - '0'
   - .
+  - ','
   - ENTER
 combos:
 - p: [19, 20]

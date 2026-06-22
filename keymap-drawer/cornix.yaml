@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - fkeys
-  - ESC
+  - LCTRL
   - {t: A, h: LCTRL}
   - {t: S, h: LEFT SHIFT}
   - {t: D, h: LEFT ALT}
@@ -24,7 +24,7 @@ layers:
   - {t: K, h: LEFT ALT}
   - {t: L, h: LEFT SHIFT}
   - {t: ;, h: LCTRL}
-  - ENTER
+  - ''''
   - LCTRL
   - Z
   - X
@@ -39,7 +39,7 @@ layers:
   - .
   - /
   - {t: BSPC, h: bspc}
-  - LCTRL
+  - ''
   - ''
   - numpad
   - {t: SPACE, h: left}
@@ -50,7 +50,7 @@ layers:
   - {t: SPACE, h: right}
   - ''
   - ''
-  - ''''
+  - ''
   left:
   - {t: ▽, type: trans}
   - Ctl+Alt+Z

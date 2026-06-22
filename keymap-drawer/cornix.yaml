@@ -505,7 +505,7 @@ layers:
   - {t: SPACE, h: LEFT SHIFT}
   - ''
   - ''
-  - ''
+  - BACKSPACE
   - '0'
   - .
   - ','

@@ -2,7 +2,7 @@ layout: {zmk_keyboard: cornix}
 layers:
   base:
   - fkeys
-  - ''
+  - Q
   - W
   - E
   - R
@@ -11,10 +11,10 @@ layers:
   - U
   - I
   - O
-  - {t: BSPC, h: bspc}
+  - P
   - fkeys
   - ESC
-  - Q
+  - {t: A, h: LCTRL}
   - {t: S, h: LEFT SHIFT}
   - {t: D, h: LEFT ALT}
   - {t: F, h: LEFT WIN}
@@ -23,10 +23,10 @@ layers:
   - {t: J, h: LEFT WIN}
   - {t: K, h: LEFT ALT}
   - {t: L, h: LEFT SHIFT}
-  - P
+  - {t: ;, h: LCTRL}
   - ENTER
   - LCTRL
-  - {t: A, h: LCTRL}
+  - Z
   - X
   - C
   - V
@@ -37,10 +37,10 @@ layers:
   - M
   - ','
   - .
-  - {t: ;, h: LCTRL}
-  - ''''
+  - /
+  - {t: BSPC, h: bspc}
   - LCTRL
-  - Z
+  - ''
   - numpad
   - {t: SPACE, h: left}
   - {t: SPACE, h: LEFT SHIFT}
@@ -49,11 +49,11 @@ layers:
   - {t: SPACE, h: RIGHT SHIFT}
   - {t: SPACE, h: right}
   - ''
-  - /
+  - ''
   - ''''
   left:
   - {t: ▽, type: trans}
-  - ''
+  - Ctl+Alt+Z
   - Alt+Ctl+X
   - Alt+Ctl+A
   - Alt+Ctl+S
@@ -62,10 +62,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+Y
-  - Ctl+Alt+Z
+  - LEFT
   - UP
   - DOWN
   - RIGHT
@@ -77,7 +77,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LEFT
+  - Gui+DOWN
   - Gui+UP
   - '&win_left'
   - '&win_right'
@@ -91,7 +91,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - Gui+DOWN
+  - ''
   - ''
   - {type: held}
   - {t: ▽, type: trans}
@@ -100,11 +100,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - {t: ▽, type: trans}
+  - ''
   - ''
   right:
   - {t: ▽, type: trans}
-  - ''
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -113,7 +113,7 @@ layers:
   - PSCRN
   - SLCK
   - PAUSE BREAK
-  - ''
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -125,7 +125,7 @@ layers:
   - LEFT
   - DOWN
   - UP
-  - {t: ▽, type: trans}
+  - RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -139,10 +139,10 @@ layers:
   - HOME
   - PG DN
   - PG UP
-  - RIGHT
+  - END
   - {t: ▽, type: trans}
   - ''
-  - {t: ▽, type: trans}
+  - ''
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -151,7 +151,7 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - ''
-  - END
+  - ''
   - ''
   symbol:
   - {t: ▽, type: trans}
@@ -419,7 +419,7 @@ layers:
   - BSPC
   - BSPC
   - BSPC
-  - {type: held}
+  - ''
   - BSPC
   - BSPC
   - BSPC
@@ -446,7 +446,7 @@ layers:
   - BSPC
   - BSPC
   - BSPC
-  - BSPC
+  - {t: BSPC, type: held}
   - ''
   - ''
   - ''

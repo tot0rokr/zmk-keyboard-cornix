@@ -326,7 +326,7 @@
             display-name = "nav";
             bindings = <
 &trans     &kp LC(LA(Z))  &kp LA(LC(X))  &kp LA(LC(A))  &kp LA(LC(S))  &trans                &kp INS   &kp PSCRN  &kp SLCK   &kp PAUSE_BREAK  &trans     &trans
-&kp LC(Y)  &kp LEFT       &kp UP         &kp DOWN       &kp RIGHT      &trans                &kp RALT  &kp LEFT   &kp DOWN   &kp UP           &kp RIGHT  &trans
+&kp LC(Y)  &quick_tab LCTRL LEFT  &quick_tab LEFT_SHIFT UP  &quick_tab LEFT_ALT DOWN  &quick_tab_retro LEFT_WIN RIGHT  &trans                &kp RALT  &quick_tab_retro LEFT_WIN LEFT  &quick_tab LEFT_ALT DOWN  &quick_tab LEFT_SHIFT UP  &quick_tab LCTRL RIGHT  &trans
 &trans     &kp LG(DOWN)   &kp LG(UP)     &win_left      &win_right     &trans  &none  &none  &kp CAPS  &kp HOME   &kp PG_DN  &kp PG_UP        &kp END    &trans
 &none      &none          &none          &trans         &trans         &trans                &trans    &trans     &trans     &none            &none      &none
             >;

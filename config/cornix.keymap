@@ -156,35 +156,35 @@
         backspace_combo {
             bindings = <&kp BACKSPACE>;
             key-positions = <19 20>;
-            layers = <0 3 4>;
+            layers = <0 2 3>;
             timeout-ms = <38>;
         };
 
         enter_combo {
             bindings = <&kp ENTER>;
             key-positions = <19 21>;
-            layers = <0 3 4>;
+            layers = <0 2 3>;
             timeout-ms = <38>;
         };
 
         backspace2_combo {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 15>;
-            layers = <0 4 3>;
+            layers = <0 3 2>;
             timeout-ms = <38>;
         };
 
         enter2_combo {
             bindings = <&kp ENTER>;
             key-positions = <16 14>;
-            layers = <0 4 3>;
+            layers = <0 3 2>;
             timeout-ms = <38>;
         };
 
         esc_combo {
             bindings = <&kp ESC>;
             key-positions = <3 2>;
-            layers = <0 4>;
+            layers = <0 3>;
             timeout-ms = <38>;
         };
 
@@ -192,14 +192,14 @@
             bindings = <&kp DEL>;
             key-positions = <33 34>;
             timeout-ms = <38>;
-            layers = <0 3 4>;
+            layers = <0 2 3>;
         };
 
         delete_combo2 {
             bindings = <&kp DEL>;
             key-positions = <28 27>;
             timeout-ms = <38>;
-            layers = <0 4 3>;
+            layers = <0 3 2>;
         };
 
         win_e_combo {
@@ -233,7 +233,7 @@
         };
 
         device_layer_combo {
-            bindings = <&mo 5>;
+            bindings = <&mo 4>;
             key-positions = <44 45 46>;
         };
 
@@ -245,7 +245,7 @@
         left_bootloader_combo {
             bindings = <&bootloader>;
             key-positions = <0 12 24>;
-            layers = <5>;
+            layers = <4>;
             timeout-ms = <100>;
             require-prior-idle-ms = <500>;
         };
@@ -253,7 +253,7 @@
         right_bootloader_combo {
             bindings = <&bootloader>;
             key-positions = <11 23 37>;
-            layers = <5>;
+            layers = <4>;
             timeout-ms = <100>;
             require-prior-idle-ms = <500>;
         };
@@ -295,10 +295,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 6 &kp LEFT_GUI>,
+                <&mo 5 &kp LEFT_GUI>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 6 &kp LEFT_GUI>;
+                <&mo 5 &kp LEFT_GUI>;
 
             label = "SWITCH_TASKS_LAYER";
         };
@@ -313,35 +313,25 @@
         BL {
             display-name = "base";
             bindings = <
-&mo 7      &kp Q               &kp W                    &kp E                     &kp R                                  &kp T                                 &kp Y                    &kp U                                   &kp I                     &kp O                    &kp P                  &mo 7
+&mo 6      &kp Q               &kp W                    &kp E                     &kp R                                  &kp T                                 &kp Y                    &kp U                                   &kp I                     &kp O                    &kp P                  &mo 6
 &kp LCTRL  &quick_tab LCTRL A  &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab_retro LEFT_WIN F            &kp G                                 &kp H                    &quick_tab_retro LEFT_WIN J             &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &quick_tab LCTRL SEMI  &kp APOS
-&kp LCTRL  &kp Z               &kp X                    &kp C                     &kp V                                  &kp B                   &none  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &kp FSLH               &bspc_ht 8 BSPC
-&none      &none               &mo 9                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 3 TAB                &layer_quick_tab 4 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 2 SPACE  &kp MINUS                &kp EQUAL              &kp BSLH
+&kp LCTRL  &kp Z               &kp X                    &kp C                     &kp V                                  &kp B                   &none  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &kp FSLH               &bspc_ht 7 BSPC
+&none      &none               &mo 8                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 2 TAB                &layer_quick_tab 3 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 1 SPACE  &kp MINUS                &kp EQUAL              &kp BSLH
             >;
 
             sensor-bindings = <&knob_mouse_scroll_2x &inc_dec_kp PG_UP PG_DN>;
         };
 
-        LHL {
-            display-name = "left";
+        NAV {
+            display-name = "nav";
             bindings = <
-&trans     &kp LC(LA(Z))  &kp LA(LC(X))  &kp LA(LC(A))  &kp LA(LC(S))  &trans                &trans  &trans  &trans  &trans  &trans  &trans
-&kp LC(Y)  &kp LEFT       &kp UP         &kp DOWN       &kp RIGHT      &trans                &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &kp LG(DOWN)   &kp LG(UP)     &win_left      &win_right     &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &trans
-&none      &none          &none          &trans         &trans         &trans                &trans  &trans  &trans  &none   &none   &none
+&trans     &kp LC(LA(Z))  &kp LA(LC(X))  &kp LA(LC(A))  &kp LA(LC(S))  &trans                &kp INS   &kp PSCRN  &kp SLCK   &kp PAUSE_BREAK  &trans     &trans
+&kp LC(Y)  &kp LEFT       &kp UP         &kp DOWN       &kp RIGHT      &trans                &kp RALT  &kp LEFT   &kp DOWN   &kp UP           &kp RIGHT  &trans
+&trans     &kp LG(DOWN)   &kp LG(UP)     &win_left      &win_right     &trans  &none  &none  &kp CAPS  &kp HOME   &kp PG_DN  &kp PG_UP        &kp END    &trans
+&none      &none          &none          &trans         &trans         &trans                &trans    &trans     &trans     &none            &none      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-        };
-
-        RHL {
-            display-name = "right";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                &kp INS   &kp PSCRN  &kp SLCK   &kp PAUSE_BREAK  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                &kp RALT  &kp LEFT   &kp DOWN   &kp UP           &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none  &none  &kp CAPS  &kp HOME   &kp PG_DN  &kp PG_UP        &kp END    &trans
-&none   &none   &none   &trans  &trans  &trans                &trans    &trans     &trans     &none            &none      &none
-            >;
         };
 
         LTL {

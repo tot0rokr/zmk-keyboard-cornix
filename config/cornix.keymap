@@ -170,21 +170,21 @@
         backspace2_combo {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 15>;
-            layers = <0 3 2>;
+            layers = <0 3 2 8>;
             timeout-ms = <38>;
         };
 
         enter2_combo {
             bindings = <&kp ENTER>;
             key-positions = <16 14>;
-            layers = <0 3 2>;
+            layers = <0 3 2 8>;
             timeout-ms = <38>;
         };
 
         esc_combo {
             bindings = <&kp ESC>;
             key-positions = <3 2>;
-            layers = <0 3>;
+            layers = <0 3 8>;
             timeout-ms = <38>;
         };
 
@@ -199,7 +199,7 @@
             bindings = <&kp DEL>;
             key-positions = <28 27>;
             timeout-ms = <38>;
-            layers = <0 3 2>;
+            layers = <0 3 2 8>;
         };
 
         win_e_combo {

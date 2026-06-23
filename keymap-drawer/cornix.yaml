@@ -42,72 +42,21 @@ layers:
   - ''
   - ''
   - numpad
-  - {t: SPACE, h: left}
+  - {t: SPACE, h: nav}
   - {t: SPACE, h: LEFT SHIFT}
   - {t: TAB, h: symbol}
   - {t: RALT, h: function}
   - {t: SPACE, h: RIGHT SHIFT}
-  - {t: SPACE, h: right}
+  - {t: SPACE, h: nav}
   - '-'
   - '='
   - \
-  left:
+  nav:
   - {t: ▽, type: trans}
   - Ctl+Alt+Z
   - Alt+Ctl+X
   - Alt+Ctl+A
   - Alt+Ctl+S
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Ctl+Y
-  - LEFT
-  - UP
-  - DOWN
-  - RIGHT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Gui+DOWN
-  - Gui+UP
-  - '&win_left'
-  - '&win_right'
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  right:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - INS
   - PSCRN
@@ -115,23 +64,23 @@ layers:
   - PAUSE BREAK
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+Y
+  - {t: LEFT, h: LCTRL}
+  - {t: UP, h: LEFT SHIFT}
+  - {t: DOWN, h: LEFT ALT}
+  - {t: RIGHT, h: LEFT WIN}
   - {t: ▽, type: trans}
   - RALT
-  - LEFT
-  - DOWN
-  - UP
-  - RIGHT
+  - {t: LEFT, h: LEFT WIN}
+  - {t: DOWN, h: LEFT ALT}
+  - {t: UP, h: LEFT SHIFT}
+  - {t: RIGHT, h: LCTRL}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Gui+DOWN
+  - Gui+UP
+  - '&win_left'
+  - '&win_right'
   - {t: ▽, type: trans}
   - ''
   - ''
@@ -144,12 +93,12 @@ layers:
   - ''
   - ''
   - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   - ''
   - ''
@@ -519,34 +468,34 @@ combos:
   l: [base, symbol, function]
 - p: [16, 15]
   k: BACKSPACE
-  l: [base, function, symbol]
+  l: [base, function, symbol, numpad]
 - p: [16, 14]
   k: ENTER
-  l: [base, function, symbol]
+  l: [base, function, symbol, numpad]
 - p: [3, 2]
   k: ESC
-  l: [base, function]
+  l: [base, function, numpad]
 - p: [33, 34]
   k: DEL
   l: [base, symbol, function]
 - p: [28, 27]
   k: DEL
-  l: [base, function, symbol]
+  l: [base, function, symbol, numpad]
 - p: [3, 2]
   k: Gui+E
-  l: [left]
+  l: [nav]
 - p: [4, 3]
   k: Gui+R
-  l: [left]
+  l: [nav]
 - p: [4, 5]
   k: Gui+Sft+T
-  l: [left]
+  l: [nav]
 - p: [13, 14]
   k: Gui+Sft+S
-  l: [left]
+  l: [nav]
 - p: [28, 27]
   k: Gui+V
-  l: [left]
+  l: [nav]
 - p: [44, 45, 46]
   k: device
 - p: [44, 46]

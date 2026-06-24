@@ -313,22 +313,24 @@
         BL {
             display-name = "base";
             bindings = <
-&mo 6      &kp Q               &kp W                    &kp E                     &kp R                                  &kp T                                 &kp Y                    &kp U                                   &kp I                     &kp O                    &kp P                  &mo 6
-&kp LCTRL  &quick_tab LCTRL A  &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab_retro LEFT_WIN F            &kp G                                 &kp H                    &quick_tab_retro LEFT_WIN J             &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &quick_tab LCTRL SEMI  &kp APOS
-&kp LCTRL  &kp Z               &kp X                    &kp C                     &kp V                                  &kp B                   &none  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &kp FSLH               &bspc_ht 7 BSPC
-&none      &none               &mo 8                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 2 TAB                &layer_quick_tab 3 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 1 SPACE  &kp MINUS                &kp EQUAL              &kp BSLH
+&mo 6      &kp Q               &kp W                    &kp E                     &kp R                                  &kp T                                    &kp Y                    &kp U                                   &kp I                     &kp O                    &kp P                  &mo 6
+&kp LCTRL  &quick_tab LCTRL A  &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab_retro LEFT_WIN F            &kp G                                    &kp H                    &quick_tab_retro LEFT_WIN J             &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &quick_tab LCTRL SEMI  &kp APOS
+&kp LCTRL  &kp Z               &kp X                    &kp C                     &kp V                                  &kp B                   &kp C_PP  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &kp FSLH               &bspc_ht 7 BSPC
+&none      &none               &mo 8                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 2 TAB                   &layer_quick_tab 3 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 1 SPACE  &kp MINUS                &kp EQUAL              &kp BSLH
             >;
 
-            sensor-bindings = <&knob_mouse_scroll_2x &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
 
         NAV {
             display-name = "nav";
             bindings = <
-&trans     &kp LC(LA(Z))  &kp LA(LC(X))  &kp LA(LC(A))  &kp LA(LC(S))  &trans                &kp INS   &kp PSCRN  &kp SLCK   &kp PAUSE_BREAK  &trans     &trans
+&trans     &kp LC(LA(Z))          &kp LA(LC(X))             &kp LA(LC(A))             &kp LA(LC(S))                    &trans                &kp INS   &kp PSCRN                       &kp SLCK                  &kp PAUSE_BREAK           &trans                  &trans
 &kp LC(Y)  &quick_tab LCTRL LEFT  &quick_tab LEFT_SHIFT UP  &quick_tab LEFT_ALT DOWN  &quick_tab_retro LEFT_WIN RIGHT  &trans                &kp RALT  &quick_tab_retro LEFT_WIN LEFT  &quick_tab LEFT_ALT DOWN  &quick_tab LEFT_SHIFT UP  &quick_tab LCTRL RIGHT  &trans
-&trans     &kp LG(DOWN)   &kp LG(UP)     &win_left      &win_right     &trans  &none  &none  &kp CAPS  &kp HOME   &kp PG_DN  &kp PG_UP        &kp END    &trans
-&none      &none          &none          &trans         &trans         &trans                &trans    &trans     &trans     &none            &none      &none
+&trans     &kp LG(DOWN)           &kp LG(UP)                &win_left                 &win_right                       &trans  &none  &none  &kp CAPS  &kp HOME                        &kp PG_DN                 &kp PG_UP                 &kp END                 &trans
+&none      &none                  &none                     &trans                    &trans                           &trans                &trans    &trans                          &trans                    &none                     &none                   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;

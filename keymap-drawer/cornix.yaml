@@ -39,8 +39,8 @@ layers:
   - .
   - /
   - {t: BSPC, h: bspc}
-  - ''
-  - ''
+  - '['
+  - ']'
   - numpad
   - {t: SPACE, h: nav}
   - {t: SPACE, h: LEFT SHIFT}
@@ -116,16 +116,16 @@ layers:
   - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '['
-  - ']'
-  - '{'
-  - '}'
-  - {t: (, h: LEFT SHIFT}
-  - {t: ), h: LEFT SHIFT}
-  - _
-  - '-'
-  - +
-  - '|'
+  - Sft+!
+  - Sft+@
+  - Sft+#
+  - Sft+$
+  - Sft+%
+  - Sft+^
+  - Sft+&
+  - Sft+*
+  - Sft+(
+  - Sft+)
   - {t: ▽, type: trans}
   - ''
   - ''

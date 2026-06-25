@@ -316,7 +316,7 @@
 &mo 6      &kp Q               &kp W                    &kp E                     &kp R                                  &kp T                                    &kp Y                    &kp U                                   &kp I                     &kp O                    &kp P                  &mo 6
 &kp LCTRL  &quick_tab LCTRL A  &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab_retro LEFT_WIN F            &kp G                                    &kp H                    &quick_tab_retro LEFT_WIN J             &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &quick_tab LCTRL SEMI  &kp APOS
 &kp LCTRL  &kp Z               &kp X                    &kp C                     &kp V                                  &kp B                   &kp C_PP  &none  &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &kp FSLH               &bspc_ht 7 BSPC
-&none      &none               &mo 8                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 2 TAB                   &layer_quick_tab 3 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 1 SPACE  &kp MINUS                &kp EQUAL              &kp BSLH
+&kp LBKT   &kp RBKT            &mo 8                    &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 2 TAB                   &layer_quick_tab 3 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 1 SPACE  &kp MINUS                &kp EQUAL              &kp BSLH
             >;
 
             sensor-bindings =
@@ -339,10 +339,10 @@
         LTL {
             display-name = "symbol";
             bindings = <
-&trans  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                                    &kp N6                      &kp N7     &kp N8     &kp N9    &kp N0    &trans
-&trans  &kp LBKT  &kp RBKT  &kp LBRC   &kp RBRC   &quick_tab LEFT_SHIFT LPAR                &quick_tab LEFT_SHIFT RPAR  &kp UNDER  &kp MINUS  &kp PLUS  &kp PIPE  &trans
-&none   &none     &none     &kp GRAVE  &kp TILDE  &kp APOS                    &none  &none  &kp DQT                     &kp EQUAL  &kp COMMA  &kp DOT   &kp BSLH  &none
-&none   &none     &none     &trans     &trans     &trans                                    &trans                      &trans     &trans     &none     &none     &none
+&trans  &kp N1        &kp N2      &kp N3         &kp N4        &kp N5                       &kp N6         &kp N7        &kp N8        &kp N9        &kp N0        &trans
+&trans  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &trans
+&none   &none         &none       &kp GRAVE      &kp TILDE     &kp APOS       &none  &none  &kp DQT        &kp EQUAL     &kp COMMA     &kp DOT       &kp BSLH      &none
+&none   &none         &none       &trans         &trans        &trans                       &trans         &trans        &trans        &none         &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;

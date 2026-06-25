@@ -76,7 +76,7 @@ layers:
   - {t: UP, h: LEFT SHIFT}
   - {t: RIGHT, h: LCTRL}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+Z
   - Gui+DOWN
   - Gui+UP
   - '&win_left'

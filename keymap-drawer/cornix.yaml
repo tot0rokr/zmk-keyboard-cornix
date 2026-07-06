@@ -469,7 +469,7 @@ combos:
 - p: [16, 15]
   k: BACKSPACE
   l: [base, function, symbol, numpad]
-- p: [16, 14]
+- p: [26, 28]
   k: ENTER
   l: [base, function, symbol, numpad]
 - p: [3, 2]

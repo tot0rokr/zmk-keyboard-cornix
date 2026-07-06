@@ -176,7 +176,7 @@
 
         enter2_combo {
             bindings = <&kp ENTER>;
-            key-positions = <16 14>;
+            key-positions = <26 28>;
             layers = <0 3 2 8>;
             timeout-ms = <38>;
         };
